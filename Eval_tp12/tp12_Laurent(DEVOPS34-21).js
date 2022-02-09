@@ -12,33 +12,65 @@
 // - Affichez le résultat isNaN
 // - Proposez à l’utilisateur de recommencer \n\n
 
-alert("Bienvenue sur ma calculatrice simplifiée");
 
-function choix(){
+// choisir un opérateur
+//verif
 
-    var choix = prompt("1-Addition \n 2-Soustraction \n 3-Multiplication \n 4-Division");
-    var a ;
-    var b ;
+var chooseOperator;
 
-    console.log(choix);
-    console.log(typeof choix);
-    choix = +choix;
+var flag = true;
 
-    if (choix === 1 || choix === 2 || choix === 3 || choix === 4) {
-        return choix;
-      } else {
-        throw new Error("Recommences!!");
-      }
+while(flag == true){
+    chooseOperator = prompt("1-Addition \n 2-Soustraction \n 3-Multiplication \n 4-Division");
+    chooseOperator = +chooseOperator;
+    if (chooseOperator === 1 || chooseOperator === 2 || chooseOperator === 3 || chooseOperator === 4) {
+        flag = false;
+        
+        }else{
+            flag = true;
+        }
+    }
+    flag = true;
+try{
+    while(flag == true){
+        var chiffre1=parseInt(prompt('Choisissez un nombre :'));
+        var chiffre2=parseInt(prompt('Choisissez un deuxième nombre :'));
+
+        if(isNaN(chiffre1) || isNaN(chiffre2)){
+            flag= true;
+        }else{
+            flag = false;
+            switch(chooseOperator){
+                case 1 :
+                    alert(addition(chiffre1, chiffre2));
+                break;
+                case 2 :
+                    alert(soustraction(chiffre1, chiffre2));
+                break;
+                case 3 :
+                    alert(multiplication(chiffre1, chiffre2));
+                break;
+                case 4 :
+                    alert(division(chiffre1, chiffre2));    
+                break;
+                default :
+                break;
+                }
+        }
+    }
+}catch(e){
+    alert(e);
 }
-function addition(){
+// fonction de calcul
+function addition(a,b){
     return a+b;
 }
-function soustraction(){
+function soustraction(a,b){
     return a-b;
 }
-function multiplication(){
+function multiplication(a,b){
     return a*b;
 }
-function division(){
+function division(a,b){
     return a/b;
-}
+} 
