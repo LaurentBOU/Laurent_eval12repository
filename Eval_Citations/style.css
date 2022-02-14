@@ -1,0 +1,38 @@
+@import url("https://fonts.googleapis.com/css2?family=Satisfy&display=swap");
+body {
+  font-style: normal;
+  font-family: "Satisfy", cursive;
+  background: linear-gradient(to right, blue, yellow);
+  font-size: 2rem;
+  text-align: center;
+}
+
+.main {
+  width: 60%;
+  height: 10rem;
+  text-align: center;
+}
+div {
+  text-align: center;
+}
+.citation_button {
+  width: 10%;
+  height: auto;
+  font-family: "Satisfy", incursive;
+  font-weight: 400;
+  background: rgb(91, 19, 224);
+  color: goldenrod;
+}
+p {
+  font-family: "Satisfy", cursive;
+  height: 250px;
+  width: 500px;
+  margin-left: 37%;
+  padding-top: 20px;
+  text-align: center;
+  background-color: lightblue;
+  border: dashed;
+}
+h1 {
+  text-align: center;
+}
